@@ -1,0 +1,102 @@
+body {
+    background-image: linear-gradient(to right top, #072c41, #86dad0);
+    background-size: cover;
+    min-height: 100vh; /* Use min-height instead of height to allow content overflow */
+    overflow-y: auto; /* Enable vertical scrolling */
+    position: relative;
+    margin: 0; /* Ensure there's no default margin */
+}
+
+h1 {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input.form-control {
+    height: 50px;
+    font-size: 18px;
+    border-radius: 30px;
+    padding: 0 20px;
+}
+
+button.btn {
+    border-radius: 30px;
+    width: 100%;
+    max-width: 150px;
+    height: 50px;
+    font-size: 18px;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Add some space between the weather parts */
+    justify-content: center;
+    margin-top: 1.5rem; /* Space above the weather info */
+}
+
+#weather-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem; /* Space between the weather parts */
+    padding: 0 1rem; /* Add some horizontal padding */
+}
+
+#weather-info .weather-part {
+    background: rgba(0.7, 0.7, 0.5, 0.7);
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    max-height: 350px;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.5s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for better visibility */
+}
+
+.weather-icon {
+    font-size: 45px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    input.form-control {
+        font-size: 16px;
+    }
+
+    button.btn {
+        font-size: 16px;
+    }
+
+    #weather-info .weather-part {
+        width: 100%;
+        max-width: none; /* Remove max-width on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    input.form-control {
+        font-size: 14px;
+        padding: 0 15px;
+    }
+
+    button.btn {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .weather-icon {
+        font-size: 35px;
+    }
+}
